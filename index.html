@@ -1,15 +1,371 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>Boya Logistics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boya Logistics | Global Supply Chain Solutions</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,"Microsoft YaHei",sans-serif;
+  background:#f5f7fb;
+  color:#222;
+}
+
+nav{
+  background:white;
+  min-height:78px;
+  padding:0 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:#003366;
+  text-decoration:none;
+}
+
+.menu a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#222;
+  font-weight:600;
+}
+
+.menu a:hover{
+  color:#003366;
+}
+
+.lang button{
+  border:0;
+  background:#003366;
+  color:white;
+  padding:8px 15px;
+  border-radius:20px;
+  margin-left:6px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.hero{
+  min-height:760px;
+  background:
+  linear-gradient(rgba(0,35,75,.55),rgba(0,35,75,.55)),
+  url("hero.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero-content{
+  max-width:1000px;
+}
+
+.hero h1{
+  font-size:76px;
+  margin:0 0 20px;
+  letter-spacing:1px;
+  text-shadow:0 4px 18px rgba(0,0,0,.45);
+}
+
+.hero p{
+  font-size:28px;
+  line-height:1.5;
+  margin:0 auto 35px;
+  max-width:900px;
+  text-shadow:0 4px 15px rgba(0,0,0,.45);
+}
+
+.btn{
+  display:inline-block;
+  background:#ffffff;
+  color:#003366;
+  padding:14px 32px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:800;
+  margin:8px;
+}
+
+.btn.dark{
+  background:#003366;
+  color:white;
+  border:1px solid white;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section{
+  background:white;
+  margin:30px 0;
+  padding:48px;
+  border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  line-height:1.9;
+}
+
+.section h2{
+  text-align:center;
+  color:#003366;
+  margin-top:0;
+  font-size:34px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#f8fafc;
+  padding:32px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+
+.card h3{
+  color:#003366;
+  font-size:24px;
+}
+
+.card p{
+  font-size:17px;
+}
+
+footer{
+  background:#003366;
+  color:white;
+  text-align:center;
+  padding:28px;
+  margin-top:50px;
+}
+
+.en,.fr{
+  display:none;
+}
+
+@media(max-width:900px){
+  nav{
+    flex-direction:column;
+    padding:15px;
+  }
+
+  .menu{
+    margin:12px 0;
+    text-align:center;
+  }
+
+  .menu a{
+    display:inline-block;
+    margin:6px;
+  }
+
+  .hero{
+    min-height:520px;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .hero p{
+    font-size:20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<h1>Boya Logistics</h1>
+<nav>
+<a class="logo" href="index.html">Boya Logistics</a>
 
-<p>Welcome to Boya Logistics Website.</p>
+<div class="menu">
+<a href="#about"><span class="zh">关于我们</span><span class="en">About</span><span class="fr">À propos</span></a>
+<a href="#services"><span class="zh">服务项目</span><span class="en">Services</span><span class="fr">Services</span></a>
+<a href="#advantages"><span class="zh">核心优势</span><span class="en">Advantages</span><span class="fr">Avantages</span></a>
+<a href="#contact"><span class="zh">联系我们</span><span class="en">Contact</span><span class="fr">Contact</span></a>
+</div>
+
+<div class="lang">
+<button onclick="showLang('zh')">中文</button>
+<button onclick="showLang('en')">EN</button>
+<button onclick="showLang('fr')">FR</button>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1 class="zh">博雅物流</h1>
+<h1 class="en">Boya Logistics</h1>
+<h1 class="fr">Logistique Boya</h1>
+
+<p class="zh">立足加拿大，连接北美与全球供应链，为企业提供高效、可靠、透明的一站式国际物流解决方案。</p>
+<p class="en">Canadian-based logistics solutions connecting North America and global supply chains with reliable, efficient, and transparent service.</p>
+<p class="fr">Des solutions logistiques basées au Canada reliant l’Amérique du Nord aux chaînes d’approvisionnement mondiales avec efficacité et fiabilité.</p>
+
+<a href="#contact" class="btn"><span class="zh">获取报价</span><span class="en">Get a Quote</span><span class="fr">Obtenir un devis</span></a>
+<a href="#services" class="btn dark"><span class="zh">查看服务</span><span class="en">View Services</span><span class="fr">Voir les services</span></a>
+
+</div>
+</section>
+
+<div class="container">
+
+<section class="section" id="about">
+<h2 class="zh">关于 Boya Logistics</h2>
+<h2 class="en">About Boya Logistics</h2>
+<h2 class="fr">À propos de Boya Logistics</h2>
+
+<p class="zh">Boya Logistics 是一家立足加拿大、服务全球的现代化国际物流企业，专注于为跨境贸易、电商企业、批发商及品牌客户提供专业、高效、可靠的一站式供应链解决方案。</p>
+<p class="en">Boya Logistics is a Canadian-based international logistics company serving global trade, e-commerce businesses, wholesalers, and brands with professional, efficient, and reliable supply chain solutions.</p>
+<p class="fr">Boya Logistics est une entreprise canadienne de logistique internationale offrant aux entreprises de commerce mondial, e-commerce, grossistes et marques des solutions fiables et efficaces.</p>
+</section>
+
+<section class="section" id="services">
+<h2 class="zh">服务项目</h2>
+<h2 class="en">Our Services</h2>
+<h2 class="fr">Nos services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3 class="zh">国际海运</h3>
+<h3 class="en">Ocean Freight</h3>
+<h3 class="fr">Transport maritime</h3>
+<p class="zh">整柜、拼箱、门到门运输服务。</p>
+<p class="en">FCL, LCL, and door-to-door shipping solutions.</p>
+<p class="fr">Solutions FCL, LCL et transport porte-à-porte.</p>
+</div>
+
+<div class="card">
+<h3 class="zh">国际空运</h3>
+<h3 class="en">Air Freight</h3>
+<h3 class="fr">Transport aérien</h3>
+<p class="zh">快速、稳定的全球空运方案。</p>
+<p class="en">Fast and reliable global air freight solutions.</p>
+<p class="fr">Solutions aériennes rapides et fiables.</p>
+</div>
+
+<div class="card">
+<h3 class="zh">仓储配送</h3>
+<h3 class="en">Warehousing</h3>
+<h3 class="fr">Entreposage</h3>
+<p class="zh">仓储、分拣、贴标、打托及配送。</p>
+<p class="en">Storage, sorting, labeling, palletizing, and distribution.</p>
+<p class="fr">Stockage, tri, étiquetage, palettisation et distribution.</p>
+</div>
+
+<div class="card">
+<h3 class="zh">清关服务</h3>
+<h3 class="en">Customs Clearance</h3>
+<h3 class="fr">Dédouanement</h3>
+<p class="zh">加拿大进口清关及合规支持。</p>
+<p class="en">Canadian import customs clearance and compliance support.</p>
+<p class="fr">Dédouanement canadien et soutien à la conformité.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="advantages">
+<h2 class="zh">核心优势</h2>
+<h2 class="en">Why Choose Us</h2>
+<h2 class="fr">Pourquoi nous choisir</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3 class="zh">全球网络</h3>
+<h3 class="en">Global Network</h3>
+<h3 class="fr">Réseau mondial</h3>
+<p class="zh">连接北美、亚洲及全球主要物流节点。</p>
+<p class="en">Connecting North America, Asia, and major global logistics hubs.</p>
+<p class="fr">Connexion entre l’Amérique du Nord, l’Asie et les principaux hubs logistiques.</p>
+</div>
+
+<div class="card">
+<h3 class="zh">透明跟踪</h3>
+<h3 class="en">Transparent Tracking</h3>
+<h3 class="fr">Suivi transparent</h3>
+<p class="zh">提供清晰、及时、可靠的货运状态更新。</p>
+<p class="en">Clear, timely, and reliable shipment status updates.</p>
+<p class="fr">Mises à jour claires et fiables sur l’état des expéditions.</p>
+</div>
+
+<div class="card">
+<h3 class="zh">定制方案</h3>
+<h3 class="en">Customized Solutions</h3>
+<h3 class="fr">Solutions personnalisées</h3>
+<p class="zh">根据客户需求设计灵活物流方案。</p>
+<p class="en">Flexible logistics solutions tailored to client needs.</p>
+<p class="fr">Solutions logistiques flexibles adaptées aux besoins des clients.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2 class="zh">联系我们</h2>
+<h2 class="en">Contact Us</h2>
+<h2 class="fr">Contact</h2>
+
+<p><strong>Email:</strong> info@boyalogistics.ca</p>
+<p><strong>Location:</strong> Toronto, Ontario, Canada</p>
+
+<p class="zh">欢迎联系我们获取物流报价及合作方案。</p>
+<p class="en">Contact us for logistics quotes and partnership solutions.</p>
+<p class="fr">Contactez-nous pour obtenir un devis logistique et des solutions de partenariat.</p>
+</section>
+
+</div>
+
+<footer>
+© Boya Logistics Canada
+</footer>
+
+<script>
+function showLang(lang){
+  localStorage.setItem('siteLang', lang);
+
+  document.querySelectorAll('.zh,.en,.fr').forEach(function(el){
+    el.style.display='none';
+  });
+
+  document.querySelectorAll('.' + lang).forEach(function(el){
+    if(el.tagName === 'SPAN'){
+      el.style.display='inline';
+    }else{
+      el.style.display='block';
+    }
+  });
+}
+
+window.onload=function(){
+  showLang(localStorage.getItem('siteLang') || 'zh');
+}
+</script>
 
 </body>
 </html>
